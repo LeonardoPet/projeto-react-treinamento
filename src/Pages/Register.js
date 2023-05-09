@@ -1,6 +1,20 @@
-import React from "react";
+import React,{useState} from "react";
+import dataLayerCadastro from '/Users/user/projeto-react-treinamento/projeto-react/src/events-DataLayer/eventsDataLayer.js'
 
 export default function Register(){
+
+    const [getEmail, setGetEmail] = useState('')
+
+    const handleChange = (event) => {
+        setGetEmail(event.target.value);
+      };
+
+    const dataLayer = (email) => {
+        setGetEmail(email)
+        dataLayerCadastro(email)
+    };
+
+
     return(
         <>
             <form >
@@ -21,7 +35,11 @@ export default function Register(){
                                     <label>E-mail: </label>
                                 </td>
                                 <td align="left">
-                                    <input type="text" name="email" />
+                                    <input type="text" name="email" 
+                                    value={getEmail}
+                                    onChange={handleChange}
+                                    />
+                                    
                                 </td>      
                             </tr>
                             <tr>
@@ -53,7 +71,7 @@ export default function Register(){
                 </fieldset>
                 <input type="reset" value="Limpar"/>
             </form>
-            <button>Cadastrar</button>     
+            <button onClick={() => dataLayer(getEmail)}>Cadastrar</button>     
         </>
     )   
 }
