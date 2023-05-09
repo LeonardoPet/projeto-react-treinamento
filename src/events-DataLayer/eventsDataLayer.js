@@ -1,5 +1,5 @@
-// 
-export default function dataLayerCadastro(email) { 
+// Data Layer Event - Registration
+export function dataLayerCadastro(email) { 
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push({
         'event': 'Registration_Completed',
@@ -7,15 +7,13 @@ export default function dataLayerCadastro(email) {
     })
 }
 
-
 // 
-const dataLayerLogin = () => { 
+export function dataLayerLogin () { 
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push({
         'event': 'Login'
     })
 }
-export {dataLayerLogin}
 
 // 
 const dataLayerForgotPassword = () => { 

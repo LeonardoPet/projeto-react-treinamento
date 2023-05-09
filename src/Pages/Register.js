@@ -1,5 +1,5 @@
 import React,{useState} from "react";
-import dataLayerCadastro from '/Users/user/projeto-react-treinamento/projeto-react/src/events-DataLayer/eventsDataLayer.js'
+import {dataLayerCadastro} from '../events-DataLayer/eventsDataLayer.js'
 
 export default function Register(){
 
@@ -37,8 +37,7 @@ export default function Register(){
                                 <td align="left">
                                     <input type="text" name="email" 
                                     value={getEmail}
-                                    onChange={handleChange}
-                                    />
+                                    onChange={handleChange}/>
                                     
                                 </td>      
                             </tr>
@@ -71,7 +70,7 @@ export default function Register(){
                 </fieldset>
                 <input type="reset" value="Limpar"/>
             </form>
-            <button onClick={() => dataLayer(getEmail)}>Cadastrar</button>     
+            <button id="register" onClick={() => dataLayer(getEmail)}>Cadastrar</button>     
         </>
     )   
 }

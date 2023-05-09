@@ -1,7 +1,13 @@
 import React from "react";
 import { Link } from 'react-router-dom';
+import {dataLayerLogin} from '../events-DataLayer/eventsDataLayer.js'
 
 export default function Login(){
+
+    const dataLayer = () => {
+        dataLayerLogin()
+    };
+
     return(   
     <>
         <form >
@@ -30,7 +36,7 @@ export default function Login(){
             </fieldset>
         <br />    
         </form>
-        <button>Login</button>
+        <button id="login" onClick={() => dataLayer()}>Login</button>
         <Link to="/forgotPassword">Esqueceu a Senha?</Link>
     </>
     )   
