@@ -8,7 +8,7 @@ export function dataLayerCadastro(email) {
 }
 
 // 
-export function dataLayerLogin () { 
+export function dataLayerLogin() { 
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push({
         'event': 'Login'
@@ -16,14 +16,14 @@ export function dataLayerLogin () {
 }
 
 // 
-const dataLayerForgotPassword = () => { 
+export function dataLayerForgotPassword(email) { 
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push({
         'event': 'ForgotPassword',
-        'email': ''
+        'email': email
     })
 }
-export {dataLayerForgotPassword}
+
 
 // 
 const dataLayerWatch = () => { 
