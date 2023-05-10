@@ -34,7 +34,7 @@ export function dataLayerWatch(anime) {
     })
 }
 
-// 
+// Data Layer Event - New Register
 const dataLayerNovoCadastro = () => { 
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push({
