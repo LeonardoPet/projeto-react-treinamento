@@ -7,7 +7,7 @@ export function dataLayerCadastro(email) {
     })
 }
 
-// 
+// Data Layer Event - Login
 export function dataLayerLogin() { 
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push({
@@ -15,7 +15,7 @@ export function dataLayerLogin() {
     })
 }
 
-// 
+// Data Layer Event - Forgot Password
 export function dataLayerForgotPassword(email) { 
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push({
@@ -25,15 +25,14 @@ export function dataLayerForgotPassword(email) {
 }
 
 
-// 
-const dataLayerWatch = () => { 
+// Data Layer Event - Watch
+export function dataLayerWatch(anime) { 
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push({
         'event': 'Watch',
-        'anime_name': ''
+        'anime_name': anime
     })
 }
-export {dataLayerWatch}
 
 // 
 const dataLayerNovoCadastro = () => { 
@@ -44,22 +43,3 @@ const dataLayerNovoCadastro = () => {
 }
 export {dataLayerNovoCadastro}
 
-// 
-const dataLayerTeste5 = () => { 
-    window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push({
-        'event': '',
-        'buttonText': ''
-    })
-}
-export {dataLayerTeste5}
-
-//
-const dataLayerTeste6 = () => { 
-    window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push({
-        'event': '',
-        'buttonText': ''
-    })
-}
-export {dataLayerTeste6} 
