@@ -1,5 +1,8 @@
 import React,{useState} from "react";
 import {dataLayerCadastro} from '../events-DataLayer/eventsDataLayer.js'
+import {dataLayerNovoCadastro} from '../events-DataLayer/eventsDataLayer.js'
+
+
 
 export default function Register(){
 
@@ -12,6 +15,7 @@ export default function Register(){
     const dataLayer = (email) => {
         setGetEmail(email)
         dataLayerCadastro(email)
+        dataLayerNovoCadastro()
     };
 
 
