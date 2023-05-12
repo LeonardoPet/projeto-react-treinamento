@@ -1,0 +1,100 @@
+@keyframes move-it {
+	0% {
+	  background-position: initial;
+	}
+	100% {
+	  background-position: 100px 0px;
+	}
+  }
+
+body {  
+	background: repeating-linear-gradient(
+	45deg,
+	#606dbc,
+	#606dbc 5%,
+	#465298 5%,
+	#465298 10%
+  );
+	background-size: 100px 100px;
+	animation: move-it 2s linear infinite;
+  }
+
+.cardContainer {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 10px;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.cardContainer:hover .card {
+  opacity: .7;
+  cursor: pointer;
+  filter: grayscale(1);
+}
+
+.cardContainer .card {
+  margin: 10px;
+  width: calc(100% / 3 - 20px);
+  float: left;
+  box-shadow: 0 0 2px 2px rgba(0,0,0,.05);
+  background: #FFF;
+  -webkit-transition: .3s all ease;
+  transition: .15s all ease;
+}
+
+.cardContainer .card:hover {
+  box-shadow: 0 0 8px 3px rgba(0,0,0,.15);
+  transform: scale(1.025);
+  opacity: 1;
+  filter: grayscale(0);
+  transition: .35s all ease;
+}
+
+.cardContainer .card img {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.cardContainer .card .content {
+  padding: 15px 20px;
+}
+
+.cardContainer .card h3 {
+  font: 2.8rem/3.4rem 'Bree Serif', serif;
+  padding: 0;
+  margin: 0 0 10px;
+  letter-spacing: -.075rem
+}
+
+.cardContainer .card p {
+  color: #888;
+  padding: 0;
+  margin: 0;
+  font: 400 1.6rem/2.2rem 'Open Sans script=all', sans-serif;
+}
+
+a{
+  text-align: center;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+} 
+
+h1{
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 800;
+	font-size: 7vw;
+	line-height: 1;
+	color:black;
+	text-align:left;
+    padding: 5%;
+}
+
+p{
+  text-align: center;
+  font-size: 25px;
+}
+
